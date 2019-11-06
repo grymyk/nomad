@@ -1,0 +1,14 @@
+# Node build artifacts
+node_modules
+npm-debug.log
+
+# Local development
+*.env
+*.dev
+.DS_Store
+
+.idea/
+package-lock.json
+
+src/js/globe.v0.js
+
