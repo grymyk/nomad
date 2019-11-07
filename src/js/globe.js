@@ -254,6 +254,7 @@ DAT.Globe = function(container, colorFn) {
 
         var min_size = 10000000000;
         var max_size = 0;
+        let factor = 2.5;
 
         var index = 0;
 
@@ -261,7 +262,7 @@ DAT.Globe = function(container, colorFn) {
         lng = data[index + 1];
         color = new THREE.Color(0x0000ff);
         size = data[index + 2];
-        size = size * GLOBE_RADIUS;
+        size = size * GLOBE_RADIUS / factor;
 
         addSphere(lat, lng, size, color, subgeo);
 
