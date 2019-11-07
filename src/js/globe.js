@@ -154,7 +154,9 @@ DAT.Globe = function(container, colorFn) {
         geometry = new THREE.OctahedronGeometry(10);
         // geometry = new THREE.CubeGeometry(10.75, 10.75, 1);
         geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0,0,-0.5));
-        sphere = new THREE.Mesh(geometry);
+        material = new THREE.MeshPhongMaterial();
+
+        sphere = new THREE.Mesh(geometry, material);
 
         renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setSize(w, h);
@@ -254,7 +256,7 @@ DAT.Globe = function(container, colorFn) {
 
         var min_size = 10000000000;
         var max_size = 0;
-        let factor = 2.5;
+        let factor = 3;
 
         var index = 0;
 
