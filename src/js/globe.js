@@ -371,8 +371,9 @@ DAT.Globe = function(container, colorFn) {
     function onDocumentKeyDown(event) {
         let step = 5;
         let nomad = objects[3];
-        let phi = 180 / Math.PI * 60;
-        let theta = 180 / Math.PI * 60;
+        let phi = 180 / Math.PI * 120;
+        let theta = 180 / Math.PI * 120;
+        let radius = 10;
 
         switch(event.code) {
             case "KeyS":
@@ -398,7 +399,7 @@ DAT.Globe = function(container, colorFn) {
             case "KeyA":
             case "ArrowLeft":
                 // nomad.position.x -= step;
-                nomad.position.x -= Math.sin(phi) * Math.cos(theta);
+                nomad.position.x -= radius * Math.sin(phi) * Math.cos(theta);
                 // nomad.position.x -= Math.sin(theta);
 
                 break;
@@ -406,7 +407,7 @@ DAT.Globe = function(container, colorFn) {
             case "KeyD":
             case "ArrowRight":
                 // nomad.position.x += step;
-                nomad.position.x += Math.sin(phi) * Math.cos(theta);
+                nomad.position.x += radius * Math.sin(phi) * Math.cos(theta);
                 // nomad.position.x += Math.sin(theta);
 
                 break;
