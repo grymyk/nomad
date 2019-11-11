@@ -13,6 +13,8 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 import * as THREE from 'three';
+import GLTFLoader from 'three-gltf-loader';
+const loader = new GLTFLoader();
 
 var DAT = DAT || {};
 
@@ -112,7 +114,8 @@ DAT.Globe = function(container, colorFn) {
         //Earth
         shader = Shaders['earth'];
         uniforms = THREE.UniformsUtils.clone(shader.uniforms);
-        uniforms['texture'].value = new THREE.TextureLoader().load(imgDir + 'world.jpg');
+        uniforms['texture'].value = new THREE.TextureLoader()
+            .load(imgDir + 'world.jpg');
         material = new THREE.ShaderMaterial({
             uniforms: uniforms,
             vertexShader: shader.vertexShader,
@@ -247,6 +250,23 @@ DAT.Globe = function(container, colorFn) {
             scene.add(this.sphere);
             objects.push(this.sphere);
         }
+
+        // loadind the model
+        /*loader.load('../img/nomad_model.gltf',
+                gltf => {
+
+                    // called when the resource is loaded
+                scene.add(gltf.scene)
+            },
+            ( xhr ) => {
+                // called while loading is progressing
+                console.log( `${( xhr.loaded / xhr.total * 100 )}% loaded` );
+            },
+            ( error ) => {
+                // called when loading has errors
+                console.error( 'An error happened', error );
+            },
+        );*/
     }
 
     function createNomad(data) {

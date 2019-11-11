@@ -25,6 +25,9 @@ module: {
   }, {
       test: /\.(png|svg|jpg|gif)$/,
       use: ['file-loader'],
+    }, {
+      test: /\.(gltf)$/,
+      use: [{loader: "gltf-webpack-loader"}]
     }
     ]},
   resolve: {

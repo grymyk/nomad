@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "start": "node server.express.js",
+    "start": "node server.http.js",
     "heroku-postbuild": "webpack -p"
   },
   "keywords": [],
@@ -22,6 +22,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
+    "gltf-webpack-loader": "^1.0.6",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
@@ -35,8 +36,8 @@
     ]
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "three": "^0.110.0"
+    "three": "^0.110.0",
+    "three-gltf-loader": "^1.110.0"
   },
   "repository": {
     "type": "git",
