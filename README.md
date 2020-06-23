@@ -4,6 +4,8 @@ https://2019.spaceappschallenge.org/challenges/stars/orbital-scrap-metal-the-vid
 Tools:
 Three.js
 
+[Spherical Coordinate System](https://en.wikipedia.org/wiki/Spherical_coordinate_system)
+
 Source:
 The WebGL Globe is an open platform for visualizing geographic data.
 https://experiments.withgoogle.com/chrome/globe
